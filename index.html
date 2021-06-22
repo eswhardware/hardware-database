@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardware Database</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts/data.js"></script>
+    
+</head>
+<body onload="popSystemsDropdown()">
+    <header><h1>Hardware Database</h1></header>
+    <aside>
+        <nav>
+            <a id="home" href="https://eswhardware.github.io/">Home</a>
+            <a id="egress-calculator" href="https://eswhardware.github.io/egress-calculator/">Egress calculator</a>
+            <a id="gasket-query" href="https://eswhardware.github.io/gasket-query/">Gasket query</a>
+        </nav>
+    </aside>
+    <section id="controls">
+        <!-- <form action=""> -->
+            <div>
+                <label for="systems-dropdown">Búsqueda por sistema: </label>
+                <select name="systems-dropdown" id="systems-dropdown">
+                    <option value="none">Selecione un valor</option>
+                </select>
+            </div>
+            <div>
+                <label for="sap-dropdown">Búsqueda por código SAP: </label>
+                <input type="text" name="sap-dropdown" id="sap-dropdown" minlength=8 maxlength=8></input>
+            </div>
+        <!-- </form> -->
+    </section>
+    <table>
+        <thead>
+            <tr>
+                <th>Product Line</th>
+                <th>Description</th>
+                <th>Sap Code</th>
+                <th>Hardware Code</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script src="scripts/helper-functions.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
