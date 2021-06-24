@@ -3,8 +3,12 @@ systemsDropdown.addEventListener('input', () => {
     console.log(systemObject)
     deleteRows()
     popTable(systemObject)
-    
-    downloadButton.disabled = false;
+    if (dataSheets.hasOwnProperty(systemsDropdown.value)){
+        downloadButton.disabled = false;
+    }
+    else {
+        downloadButton.disabled = true;
+    }
 })
 
 sapTextBox.addEventListener('change', () => {

@@ -1,0 +1,21 @@
+let dataSheets = {
+    "2400ST":true,
+    "ES-21":true,
+    "ES-35":true,
+    "ES-45T":true,
+    "ES-4000":true,
+    "ES-5000":true,
+    "ES-6000":true,
+    "ES-9000":true,
+    "ES-BF5010T":true,
+    "ES-EL300":true,
+    "ES-EL400":true,
+    "ES-H340":true,
+    "ES-P7531":true,
+    "ES-SD450":true,
+    "ES-SD2020":true,
+    "HC-200":true,
+    "HR-2600":true,
+    "RC-500Y":true,
+
+}
