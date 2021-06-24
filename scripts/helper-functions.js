@@ -1,7 +1,8 @@
 const tableBody = document.querySelector('tbody'), 
       systemsDropdown = document.getElementById('systems-dropdown'),
       originalTable = tableBody.innerHTML,
-      sapTextBox = document.querySelector('#sap-dropdown');
+      sapTextBox = document.querySelector('#sap-dropdown'),
+      downloadButton = document.querySelector('button');
 
 function popSystemsDropdown() {
     let systemNames = new Set;
@@ -71,3 +72,13 @@ function resetDefault(htmlElement){
         htmlElement.remove(0)
     }
 }
+
+function download(url) {
+    const a = document.createElement('a')
+    a.href = url
+    a.target = '_blank'
+    a.download = url/*.split('/').pop()*/
+    document.body.appendChild(a)
+    a.click()
+    document.body.removeChild(a)
+  }
