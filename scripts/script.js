@@ -22,6 +22,16 @@ sapTextBox.addEventListener('change', () => {
     
 })
 
+descriptionTextbox.addEventListener('change', () => {
+    resetDefault(systemsDropdown)
+    popSystemsDropdown()
+    const systemObject = descriptionObjSeeker()
+    console.log(systemObject)
+    deleteRows()
+    popTable(systemObject)
+    descriptionTextbox.value="";
+    
+})
 downloadButton.addEventListener('click', () => {
     const url = `resources/${systemsDropdown.value}.zip`
     console.log(url)

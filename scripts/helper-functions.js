@@ -2,7 +2,8 @@ const tableBody = document.querySelector('tbody'),
       systemsDropdown = document.getElementById('systems-dropdown'),
       originalTable = tableBody.innerHTML,
       sapTextBox = document.querySelector('#sap-dropdown'),
-      downloadButton = document.querySelector('button');
+      downloadButton = document.querySelector('button'),
+      descriptionTextbox = document.querySelector('#desc-textbox');
 
 function popSystemsDropdown() {
     let systemNames = new Set;
@@ -39,6 +40,24 @@ function sapObjectSeeker(){
     for (let element of data){
         if (element.sapCode === sapCode){
             systemObject.push(element)
+        }
+    }
+    return systemObject;
+}
+
+function descriptionObjSeeker() {
+    const description = descriptionTextbox.value;
+    console.log(description);
+    let systemObject = new Set ()
+    let included = [];
+
+    for (let element of data){
+        // console.log(element.description)
+        if (element.description.includes(description) & !included.includes(element.description)){
+            element.system = "-";
+            element.HardwareCode = "-";
+            systemObject.add(element);
+            included.push(element.description)          
         }
     }
     return systemObject;
