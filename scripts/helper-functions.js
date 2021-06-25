@@ -54,8 +54,8 @@ function descriptionObjSeeker() {
     for (let element of data){
         // console.log(element.description)
         if (element.description.includes(description) & !included.includes(element.description)){
-            element.system = "-";
-            element.HardwareCode = "-";
+            // element.system = "-";
+            // element.HardwareCode = "-";
             systemObject.add(element);
             included.push(element.description)          
         }
